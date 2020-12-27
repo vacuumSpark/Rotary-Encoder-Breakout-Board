@@ -1,4 +1,940 @@
-EESchema Schematic File Version 2
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L SN74HC14DR:SN74HC14DR U1
+U 1 1 5FE8AC9B
+P 4750 2200
+F 0 "U1" H 4750 2970 50  0000 C CNN
+F 1 "SN74HC14DR" H 4750 2879 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4750 2200 50  0001 L BNN
+F 3 "" H 4750 2200 50  0001 L BNN
+	1    4750 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Rotary_Encoder_Switch SW1
+U 1 1 5FE8BE8F
+P 1600 1500
+F 0 "SW1" V 1646 1270 50  0000 R CNN
+F 1 "Rotary_Encoder_Switch" V 1555 1270 50  0000 R CNN
+F 2 "SnapEDA:XDCR_PEC11R-4215F-S0024" H 1450 1660 50  0001 C CNN
+F 3 "~" H 1600 1760 50  0001 C CNN
+	1    1600 1500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5FE8E122
+P 1600 2000
+F 0 "#PWR0101" H 1600 1750 50  0001 C CNN
+F 1 "GND" H 1605 1827 50  0000 C CNN
+F 2 "" H 1600 2000 50  0001 C CNN
+F 3 "" H 1600 2000 50  0001 C CNN
+	1    1600 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5FE8E7A3
+P 2050 1150
+F 0 "#PWR0102" H 2050 900 50  0001 C CNN
+F 1 "GND" H 2055 977 50  0000 C CNN
+F 2 "" H 2050 1150 50  0001 C CNN
+F 3 "" H 2050 1150 50  0001 C CNN
+	1    2050 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0103
+U 1 1 5FE8F788
+P 5700 1450
+F 0 "#PWR0103" H 5700 1300 50  0001 C CNN
+F 1 "VCC" H 5715 1623 50  0000 C CNN
+F 2 "" H 5700 1450 50  0001 C CNN
+F 3 "" H 5700 1450 50  0001 C CNN
+	1    5700 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5FE8FA49
+P 5700 2850
+F 0 "#PWR0104" H 5700 2600 50  0001 C CNN
+F 1 "GND" H 5705 2677 50  0000 C CNN
+F 2 "" H 5700 2850 50  0001 C CNN
+F 3 "" H 5700 2850 50  0001 C CNN
+	1    5700 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 1800 1600 2000
+Text GLabel 1350 1950 0    50   Input ~ 0
+ROT_A
+Wire Wire Line
+	1350 1950 1500 1950
+Wire Wire Line
+	1500 1950 1500 1800
+Text GLabel 1850 1950 2    50   Input ~ 0
+ROT_B
+Wire Wire Line
+	1700 1800 1700 1950
+Wire Wire Line
+	1700 1950 1850 1950
+Text GLabel 1400 1050 0    50   Input ~ 0
+ROT_SW
+Wire Wire Line
+	1500 1200 1500 1050
+Wire Wire Line
+	1500 1050 1400 1050
+Wire Wire Line
+	2050 1150 2050 1050
+Wire Wire Line
+	2050 1050 1700 1050
+Wire Wire Line
+	1700 1050 1700 1200
+$Comp
+L Device:R R1
+U 1 1 5FE9CA25
+P 1400 4150
+F 0 "R1" H 1470 4196 50  0000 L CNN
+F 1 "5K1" H 1470 4105 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1330 4150 50  0001 C CNN
+F 3 "~" H 1400 4150 50  0001 C CNN
+	1    1400 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5FE9D3A5
+P 1400 4750
+F 0 "R4" H 1470 4796 50  0000 L CNN
+F 1 "5K1" H 1470 4705 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1330 4750 50  0001 C CNN
+F 3 "~" H 1400 4750 50  0001 C CNN
+	1    1400 4750
+	1    0    0    -1  
+$EndComp
+Text GLabel 1300 4450 0    50   Input ~ 0
+ROT_A
+$Comp
+L Device:C C3
+U 1 1 5FE9D97F
+P 1400 5300
+F 0 "C3" H 1515 5346 50  0000 L CNN
+F 1 "0.01 uF" H 1515 5255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 1438 5150 50  0001 C CNN
+F 3 "~" H 1400 5300 50  0001 C CNN
+	1    1400 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5FE9DDF5
+P 1400 5600
+F 0 "#PWR0105" H 1400 5350 50  0001 C CNN
+F 1 "GND" H 1405 5427 50  0000 C CNN
+F 2 "" H 1400 5600 50  0001 C CNN
+F 3 "" H 1400 5600 50  0001 C CNN
+	1    1400 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0106
+U 1 1 5FE9E1C8
+P 1400 3850
+F 0 "#PWR0106" H 1400 3700 50  0001 C CNN
+F 1 "VCC" H 1415 4023 50  0000 C CNN
+F 2 "" H 1400 3850 50  0001 C CNN
+F 3 "" H 1400 3850 50  0001 C CNN
+	1    1400 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 1450 5700 1700
+Wire Wire Line
+	5700 1700 5450 1700
+Wire Wire Line
+	5700 2850 5700 2600
+Wire Wire Line
+	5700 2600 5450 2600
+Text GLabel 4050 1900 0    50   Input ~ 0
+1A
+Text GLabel 4050 2000 0    50   Input ~ 0
+2A
+Text GLabel 4050 2100 0    50   Input ~ 0
+3A
+Text GLabel 4050 2200 0    50   Input ~ 0
+4A
+Text GLabel 4050 2300 0    50   Input ~ 0
+5A
+Text GLabel 4050 2400 0    50   Input ~ 0
+6A
+Text GLabel 5450 1900 2    50   Input ~ 0
+1Y
+Text GLabel 5450 2000 2    50   Input ~ 0
+2Y
+Text GLabel 5450 2100 2    50   Input ~ 0
+3Y
+Text GLabel 5450 2200 2    50   Input ~ 0
+4Y
+Text GLabel 5450 2300 2    50   Input ~ 0
+5Y
+Text GLabel 5450 2400 2    50   Input ~ 0
+6Y
+Wire Wire Line
+	1400 3850 1400 4000
+Wire Wire Line
+	1400 5450 1400 5600
+Wire Wire Line
+	1400 5150 1400 5050
+Wire Wire Line
+	1400 4600 1400 4450
+Wire Wire Line
+	1300 4450 1400 4450
+Connection ~ 1400 4450
+Wire Wire Line
+	1400 4450 1400 4300
+Text GLabel 1600 5050 2    50   Input ~ 0
+1A
+Wire Wire Line
+	1600 5050 1400 5050
+Connection ~ 1400 5050
+Wire Wire Line
+	1400 5050 1400 4900
+Text GLabel 1950 5050 0    50   Input ~ 0
+1Y
+$Comp
+L Device:R R10
+U 1 1 5FEB3728
+P 2250 5050
+F 0 "R10" V 2457 5050 50  0000 C CNN
+F 1 "5K1" V 2366 5050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2180 5050 50  0001 C CNN
+F 3 "~" H 2250 5050 50  0001 C CNN
+	1    2250 5050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 5FEB5A30
+P 2550 5300
+F 0 "C4" H 2665 5346 50  0000 L CNN
+F 1 "0.01 uF" H 2665 5255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2588 5150 50  0001 C CNN
+F 3 "~" H 2550 5300 50  0001 C CNN
+	1    2550 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 5FEB5F18
+P 2550 5600
+F 0 "#PWR0107" H 2550 5350 50  0001 C CNN
+F 1 "GND" H 2555 5427 50  0000 C CNN
+F 2 "" H 2550 5600 50  0001 C CNN
+F 3 "" H 2550 5600 50  0001 C CNN
+	1    2550 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 5050 2100 5050
+Wire Wire Line
+	2400 5050 2550 5050
+Wire Wire Line
+	2550 5050 2550 5150
+Wire Wire Line
+	2550 5450 2550 5600
+Text GLabel 2750 5050 2    50   Input ~ 0
+2A
+Text GLabel 3100 5050 0    50   Input ~ 0
+2Y
+Wire Wire Line
+	2750 5050 2550 5050
+Connection ~ 2550 5050
+$Comp
+L Device:R R5
+U 1 1 5FEB8620
+P 3300 4750
+F 0 "R5" H 3230 4704 50  0000 R CNN
+F 1 "510" H 3230 4795 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3230 4750 50  0001 C CNN
+F 3 "~" H 3300 4750 50  0001 C CNN
+	1    3300 4750
+	-1   0    0    1   
+$EndComp
+$Comp
+L dk_Transistors-FETs-MOSFETs-Single:AO3401A Q1
+U 1 1 5FEB93F6
+P 3200 4150
+F 0 "Q1" V 3467 4150 60  0000 C CNN
+F 1 "AO3401A" V 3361 4150 60  0000 C CNN
+F 2 "digikey-footprints:SOT-23-3" H 3400 4350 60  0001 L CNN
+F 3 "http://aosmd.com/res/data_sheets/AO3401A.pdf" H 3400 4450 60  0001 L CNN
+F 4 "785-1001-1-ND" H 3400 4550 60  0001 L CNN "Digi-Key_PN"
+F 5 "AO3401A" H 3400 4650 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 3400 4750 60  0001 L CNN "Category"
+F 7 "Transistors - FETs, MOSFETs - Single" H 3400 4850 60  0001 L CNN "Family"
+F 8 "http://aosmd.com/res/data_sheets/AO3401A.pdf" H 3400 4950 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/alpha-omega-semiconductor-inc/AO3401A/785-1001-1-ND/1855943" H 3400 5050 60  0001 L CNN "DK_Detail_Page"
+F 10 "MOSFET P-CH 30V 4A SOT23" H 3400 5150 60  0001 L CNN "Description"
+F 11 "Alpha & Omega Semiconductor Inc." H 3400 5250 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 3400 5350 60  0001 L CNN "Status"
+	1    3200 4150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #PWR0108
+U 1 1 5FEC1703
+P 2750 4000
+F 0 "#PWR0108" H 2750 3850 50  0001 C CNN
+F 1 "VCC" H 2765 4173 50  0000 C CNN
+F 2 "" H 2750 4000 50  0001 C CNN
+F 3 "" H 2750 4000 50  0001 C CNN
+	1    2750 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2750 4000 2750 4150
+Wire Wire Line
+	2750 4150 3000 4150
+Wire Wire Line
+	3100 5050 3300 5050
+Wire Wire Line
+	3300 5050 3300 4900
+Wire Wire Line
+	3300 4600 3300 4450
+$Comp
+L Device:LED D1
+U 1 1 5FEC60B0
+P 3650 4500
+F 0 "D1" V 3689 4382 50  0000 R CNN
+F 1 "LED" V 3598 4382 50  0000 R CNN
+F 2 "LED_SMD:LED_0201_0603Metric" H 3650 4500 50  0001 C CNN
+F 3 "~" H 3650 4500 50  0001 C CNN
+	1    3650 4500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 5FEC705E
+P 3650 5050
+F 0 "R11" H 3580 5004 50  0000 R CNN
+F 1 "1k8" H 3580 5095 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3580 5050 50  0001 C CNN
+F 3 "~" H 3650 5050 50  0001 C CNN
+	1    3650 5050
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 5FEC751E
+P 3650 5600
+F 0 "#PWR0109" H 3650 5350 50  0001 C CNN
+F 1 "GND" H 3655 5427 50  0000 C CNN
+F 2 "" H 3650 5600 50  0001 C CNN
+F 3 "" H 3650 5600 50  0001 C CNN
+	1    3650 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 4150 3650 4150
+Wire Wire Line
+	3650 4150 3650 4350
+Wire Wire Line
+	3650 4650 3650 4900
+Wire Wire Line
+	3650 5200 3650 5600
+Text GLabel 2350 4600 0    50   Input ~ 0
+ROT_A_OUT
+Wire Wire Line
+	2350 4600 2550 4600
+Wire Wire Line
+	2550 4600 2550 5050
+$Comp
+L Device:R R2
+U 1 1 5FEF9029
+P 4500 4150
+F 0 "R2" H 4570 4196 50  0000 L CNN
+F 1 "5K1" H 4570 4105 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4430 4150 50  0001 C CNN
+F 3 "~" H 4500 4150 50  0001 C CNN
+	1    4500 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 5FEF902F
+P 4500 4750
+F 0 "R6" H 4570 4796 50  0000 L CNN
+F 1 "5K1" H 4570 4705 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4430 4750 50  0001 C CNN
+F 3 "~" H 4500 4750 50  0001 C CNN
+	1    4500 4750
+	1    0    0    -1  
+$EndComp
+Text GLabel 4400 4450 0    50   Input ~ 0
+ROT_B
+$Comp
+L Device:C C5
+U 1 1 5FEF9036
+P 4500 5300
+F 0 "C5" H 4615 5346 50  0000 L CNN
+F 1 "0.01 uF" H 4615 5255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4538 5150 50  0001 C CNN
+F 3 "~" H 4500 5300 50  0001 C CNN
+	1    4500 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 5FEF903C
+P 4500 5600
+F 0 "#PWR0110" H 4500 5350 50  0001 C CNN
+F 1 "GND" H 4505 5427 50  0000 C CNN
+F 2 "" H 4500 5600 50  0001 C CNN
+F 3 "" H 4500 5600 50  0001 C CNN
+	1    4500 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0111
+U 1 1 5FEF9042
+P 4500 3850
+F 0 "#PWR0111" H 4500 3700 50  0001 C CNN
+F 1 "VCC" H 4515 4023 50  0000 C CNN
+F 2 "" H 4500 3850 50  0001 C CNN
+F 3 "" H 4500 3850 50  0001 C CNN
+	1    4500 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 3850 4500 4000
+Wire Wire Line
+	4500 5450 4500 5600
+Wire Wire Line
+	4500 5150 4500 5050
+Wire Wire Line
+	4500 4600 4500 4450
+Wire Wire Line
+	4400 4450 4500 4450
+Connection ~ 4500 4450
+Wire Wire Line
+	4500 4450 4500 4300
+Text GLabel 4700 5050 2    50   Input ~ 0
+6A
+Wire Wire Line
+	4700 5050 4500 5050
+Connection ~ 4500 5050
+Wire Wire Line
+	4500 5050 4500 4900
+Text GLabel 5050 5050 0    50   Input ~ 0
+6Y
+$Comp
+L Device:R R12
+U 1 1 5FEF9054
+P 5350 5050
+F 0 "R12" V 5557 5050 50  0000 C CNN
+F 1 "5K1" V 5466 5050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5280 5050 50  0001 C CNN
+F 3 "~" H 5350 5050 50  0001 C CNN
+	1    5350 5050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C6
+U 1 1 5FEF905A
+P 5650 5300
+F 0 "C6" H 5765 5346 50  0000 L CNN
+F 1 "0.01 uF" H 5765 5255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5688 5150 50  0001 C CNN
+F 3 "~" H 5650 5300 50  0001 C CNN
+	1    5650 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0112
+U 1 1 5FEF9060
+P 5650 5600
+F 0 "#PWR0112" H 5650 5350 50  0001 C CNN
+F 1 "GND" H 5655 5427 50  0000 C CNN
+F 2 "" H 5650 5600 50  0001 C CNN
+F 3 "" H 5650 5600 50  0001 C CNN
+	1    5650 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 5050 5200 5050
+Wire Wire Line
+	5500 5050 5650 5050
+Wire Wire Line
+	5650 5050 5650 5150
+Wire Wire Line
+	5650 5450 5650 5600
+Text GLabel 5850 5050 2    50   Input ~ 0
+5A
+Text GLabel 6200 5050 0    50   Input ~ 0
+5Y
+Wire Wire Line
+	5850 5050 5650 5050
+Connection ~ 5650 5050
+$Comp
+L Device:R R7
+U 1 1 5FEF906E
+P 6400 4750
+F 0 "R7" H 6330 4704 50  0000 R CNN
+F 1 "510" H 6330 4795 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6330 4750 50  0001 C CNN
+F 3 "~" H 6400 4750 50  0001 C CNN
+	1    6400 4750
+	-1   0    0    1   
+$EndComp
+$Comp
+L dk_Transistors-FETs-MOSFETs-Single:AO3401A Q2
+U 1 1 5FEF907D
+P 6300 4150
+F 0 "Q2" V 6567 4150 60  0000 C CNN
+F 1 "AO3401A" V 6461 4150 60  0000 C CNN
+F 2 "digikey-footprints:SOT-23-3" H 6500 4350 60  0001 L CNN
+F 3 "http://aosmd.com/res/data_sheets/AO3401A.pdf" H 6500 4450 60  0001 L CNN
+F 4 "785-1001-1-ND" H 6500 4550 60  0001 L CNN "Digi-Key_PN"
+F 5 "AO3401A" H 6500 4650 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 6500 4750 60  0001 L CNN "Category"
+F 7 "Transistors - FETs, MOSFETs - Single" H 6500 4850 60  0001 L CNN "Family"
+F 8 "http://aosmd.com/res/data_sheets/AO3401A.pdf" H 6500 4950 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/alpha-omega-semiconductor-inc/AO3401A/785-1001-1-ND/1855943" H 6500 5050 60  0001 L CNN "DK_Detail_Page"
+F 10 "MOSFET P-CH 30V 4A SOT23" H 6500 5150 60  0001 L CNN "Description"
+F 11 "Alpha & Omega Semiconductor Inc." H 6500 5250 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 6500 5350 60  0001 L CNN "Status"
+	1    6300 4150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #PWR0113
+U 1 1 5FEF9083
+P 5850 4000
+F 0 "#PWR0113" H 5850 3850 50  0001 C CNN
+F 1 "VCC" H 5865 4173 50  0000 C CNN
+F 2 "" H 5850 4000 50  0001 C CNN
+F 3 "" H 5850 4000 50  0001 C CNN
+	1    5850 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 4000 5850 4150
+Wire Wire Line
+	5850 4150 6100 4150
+Wire Wire Line
+	6200 5050 6400 5050
+Wire Wire Line
+	6400 5050 6400 4900
+Wire Wire Line
+	6400 4600 6400 4450
+$Comp
+L Device:LED D2
+U 1 1 5FEF908E
+P 6750 4500
+F 0 "D2" V 6789 4382 50  0000 R CNN
+F 1 "LED" V 6698 4382 50  0000 R CNN
+F 2 "LED_SMD:LED_0201_0603Metric" H 6750 4500 50  0001 C CNN
+F 3 "~" H 6750 4500 50  0001 C CNN
+	1    6750 4500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R13
+U 1 1 5FEF9094
+P 6750 5050
+F 0 "R13" H 6680 5004 50  0000 R CNN
+F 1 "1k8" H 6680 5095 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6680 5050 50  0001 C CNN
+F 3 "~" H 6750 5050 50  0001 C CNN
+	1    6750 5050
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0114
+U 1 1 5FEF909A
+P 6750 5600
+F 0 "#PWR0114" H 6750 5350 50  0001 C CNN
+F 1 "GND" H 6755 5427 50  0000 C CNN
+F 2 "" H 6750 5600 50  0001 C CNN
+F 3 "" H 6750 5600 50  0001 C CNN
+	1    6750 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 4150 6750 4150
+Wire Wire Line
+	6750 4150 6750 4350
+Wire Wire Line
+	6750 4650 6750 4900
+Wire Wire Line
+	6750 5200 6750 5600
+Text GLabel 5450 4600 0    50   Input ~ 0
+ROT_B_OUT
+Wire Wire Line
+	5450 4600 5650 4600
+Wire Wire Line
+	5650 4600 5650 5050
+$Comp
+L Device:R R3
+U 1 1 5FF0332A
+P 7600 4150
+F 0 "R3" H 7670 4196 50  0000 L CNN
+F 1 "5K1" H 7670 4105 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7530 4150 50  0001 C CNN
+F 3 "~" H 7600 4150 50  0001 C CNN
+	1    7600 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5FF03330
+P 7600 4750
+F 0 "R8" H 7670 4796 50  0000 L CNN
+F 1 "5K1" H 7670 4705 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7530 4750 50  0001 C CNN
+F 3 "~" H 7600 4750 50  0001 C CNN
+	1    7600 4750
+	1    0    0    -1  
+$EndComp
+Text GLabel 7500 4450 0    50   Input ~ 0
+ROT_SW
+$Comp
+L Device:C C7
+U 1 1 5FF03337
+P 7600 5300
+F 0 "C7" H 7715 5346 50  0000 L CNN
+F 1 "0.01 uF" H 7715 5255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7638 5150 50  0001 C CNN
+F 3 "~" H 7600 5300 50  0001 C CNN
+	1    7600 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0115
+U 1 1 5FF0333D
+P 7600 5600
+F 0 "#PWR0115" H 7600 5350 50  0001 C CNN
+F 1 "GND" H 7605 5427 50  0000 C CNN
+F 2 "" H 7600 5600 50  0001 C CNN
+F 3 "" H 7600 5600 50  0001 C CNN
+	1    7600 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0116
+U 1 1 5FF03343
+P 7600 3850
+F 0 "#PWR0116" H 7600 3700 50  0001 C CNN
+F 1 "VCC" H 7615 4023 50  0000 C CNN
+F 2 "" H 7600 3850 50  0001 C CNN
+F 3 "" H 7600 3850 50  0001 C CNN
+	1    7600 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 3850 7600 4000
+Wire Wire Line
+	7600 5450 7600 5600
+Wire Wire Line
+	7600 5150 7600 5050
+Wire Wire Line
+	7600 4600 7600 4450
+Wire Wire Line
+	7500 4450 7600 4450
+Connection ~ 7600 4450
+Wire Wire Line
+	7600 4450 7600 4300
+Text GLabel 7800 5050 2    50   Input ~ 0
+3A
+Wire Wire Line
+	7800 5050 7600 5050
+Connection ~ 7600 5050
+Wire Wire Line
+	7600 5050 7600 4900
+Text GLabel 8150 5050 0    50   Input ~ 0
+3Y
+$Comp
+L Device:R R14
+U 1 1 5FF03355
+P 8450 5050
+F 0 "R14" V 8657 5050 50  0000 C CNN
+F 1 "5K1" V 8566 5050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 8380 5050 50  0001 C CNN
+F 3 "~" H 8450 5050 50  0001 C CNN
+	1    8450 5050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C8
+U 1 1 5FF0335B
+P 8750 5300
+F 0 "C8" H 8865 5346 50  0000 L CNN
+F 1 "0.01 uF" H 8865 5255 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 8788 5150 50  0001 C CNN
+F 3 "~" H 8750 5300 50  0001 C CNN
+	1    8750 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0117
+U 1 1 5FF03361
+P 8750 5600
+F 0 "#PWR0117" H 8750 5350 50  0001 C CNN
+F 1 "GND" H 8755 5427 50  0000 C CNN
+F 2 "" H 8750 5600 50  0001 C CNN
+F 3 "" H 8750 5600 50  0001 C CNN
+	1    8750 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 5050 8300 5050
+Wire Wire Line
+	8600 5050 8750 5050
+Wire Wire Line
+	8750 5050 8750 5150
+Wire Wire Line
+	8750 5450 8750 5600
+Text GLabel 8950 5050 2    50   Input ~ 0
+4A
+Text GLabel 9300 5050 0    50   Input ~ 0
+4Y
+Wire Wire Line
+	8950 5050 8750 5050
+Connection ~ 8750 5050
+$Comp
+L Device:R R9
+U 1 1 5FF0336F
+P 9500 4750
+F 0 "R9" H 9430 4704 50  0000 R CNN
+F 1 "510" H 9430 4795 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 9430 4750 50  0001 C CNN
+F 3 "~" H 9500 4750 50  0001 C CNN
+	1    9500 4750
+	-1   0    0    1   
+$EndComp
+$Comp
+L dk_Transistors-FETs-MOSFETs-Single:AO3401A Q3
+U 1 1 5FF0337E
+P 9400 4150
+F 0 "Q3" V 9667 4150 60  0000 C CNN
+F 1 "AO3401A" V 9561 4150 60  0000 C CNN
+F 2 "digikey-footprints:SOT-23-3" H 9600 4350 60  0001 L CNN
+F 3 "http://aosmd.com/res/data_sheets/AO3401A.pdf" H 9600 4450 60  0001 L CNN
+F 4 "785-1001-1-ND" H 9600 4550 60  0001 L CNN "Digi-Key_PN"
+F 5 "AO3401A" H 9600 4650 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 9600 4750 60  0001 L CNN "Category"
+F 7 "Transistors - FETs, MOSFETs - Single" H 9600 4850 60  0001 L CNN "Family"
+F 8 "http://aosmd.com/res/data_sheets/AO3401A.pdf" H 9600 4950 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/alpha-omega-semiconductor-inc/AO3401A/785-1001-1-ND/1855943" H 9600 5050 60  0001 L CNN "DK_Detail_Page"
+F 10 "MOSFET P-CH 30V 4A SOT23" H 9600 5150 60  0001 L CNN "Description"
+F 11 "Alpha & Omega Semiconductor Inc." H 9600 5250 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 9600 5350 60  0001 L CNN "Status"
+	1    9400 4150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #PWR0118
+U 1 1 5FF03384
+P 8950 4000
+F 0 "#PWR0118" H 8950 3850 50  0001 C CNN
+F 1 "VCC" H 8965 4173 50  0000 C CNN
+F 2 "" H 8950 4000 50  0001 C CNN
+F 3 "" H 8950 4000 50  0001 C CNN
+	1    8950 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8950 4000 8950 4150
+Wire Wire Line
+	8950 4150 9200 4150
+Wire Wire Line
+	9300 5050 9500 5050
+Wire Wire Line
+	9500 5050 9500 4900
+Wire Wire Line
+	9500 4600 9500 4450
+$Comp
+L Device:LED D3
+U 1 1 5FF0338F
+P 9850 4500
+F 0 "D3" V 9889 4382 50  0000 R CNN
+F 1 "LED" V 9798 4382 50  0000 R CNN
+F 2 "LED_SMD:LED_0201_0603Metric" H 9850 4500 50  0001 C CNN
+F 3 "~" H 9850 4500 50  0001 C CNN
+	1    9850 4500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R15
+U 1 1 5FF03395
+P 9850 5050
+F 0 "R15" H 9780 5004 50  0000 R CNN
+F 1 "1k8" H 9780 5095 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 9780 5050 50  0001 C CNN
+F 3 "~" H 9850 5050 50  0001 C CNN
+	1    9850 5050
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0119
+U 1 1 5FF0339B
+P 9850 5600
+F 0 "#PWR0119" H 9850 5350 50  0001 C CNN
+F 1 "GND" H 9855 5427 50  0000 C CNN
+F 2 "" H 9850 5600 50  0001 C CNN
+F 3 "" H 9850 5600 50  0001 C CNN
+	1    9850 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9600 4150 9850 4150
+Wire Wire Line
+	9850 4150 9850 4350
+Wire Wire Line
+	9850 4650 9850 4900
+Wire Wire Line
+	9850 5200 9850 5600
+Text GLabel 8550 4600 0    50   Input ~ 0
+ROT_SW_OUT
+Wire Wire Line
+	8550 4600 8750 4600
+Wire Wire Line
+	8750 4600 8750 5050
+$Comp
+L Device:C C1
+U 1 1 5FF28A2F
+P 6200 2100
+F 0 "C1" H 6315 2146 50  0000 L CNN
+F 1 "0.1 uF" H 6315 2055 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 6238 1950 50  0001 C CNN
+F 3 "~" H 6200 2100 50  0001 C CNN
+	1    6200 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5FF2A7C2
+P 6650 2100
+F 0 "C2" H 6765 2146 50  0000 L CNN
+F 1 "1 uF" H 6765 2055 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 6688 1950 50  0001 C CNN
+F 3 "~" H 6650 2100 50  0001 C CNN
+	1    6650 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0120
+U 1 1 5FF2CE34
+P 6450 1750
+F 0 "#PWR0120" H 6450 1600 50  0001 C CNN
+F 1 "VCC" H 6465 1923 50  0000 C CNN
+F 2 "" H 6450 1750 50  0001 C CNN
+F 3 "" H 6450 1750 50  0001 C CNN
+	1    6450 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0121
+U 1 1 5FF2D1D0
+P 6450 2550
+F 0 "#PWR0121" H 6450 2300 50  0001 C CNN
+F 1 "GND" H 6455 2377 50  0000 C CNN
+F 2 "" H 6450 2550 50  0001 C CNN
+F 3 "" H 6450 2550 50  0001 C CNN
+	1    6450 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 1950 6200 1900
+Wire Wire Line
+	6200 1900 6450 1900
+Wire Wire Line
+	6450 1900 6450 1750
+Wire Wire Line
+	6650 1950 6650 1900
+Wire Wire Line
+	6650 1900 6450 1900
+Connection ~ 6450 1900
+Wire Wire Line
+	6200 2250 6200 2350
+Wire Wire Line
+	6200 2350 6450 2350
+Wire Wire Line
+	6450 2350 6450 2550
+Wire Wire Line
+	6650 2250 6650 2350
+Wire Wire Line
+	6650 2350 6450 2350
+Connection ~ 6450 2350
+$Comp
+L dk_Rectangular-Connectors-Headers-Male-Pins:B5B-XH-A_LF__SN_ J1
+U 1 1 5FF50EA8
+P 8850 2250
+F 0 "J1" V 9091 2122 50  0000 R CNN
+F 1 "B5B-XH-A_LF__SN_" V 9000 2122 50  0000 R CNN
+F 2 "digikey-footprints:PinHeader_1x5_P2.5mm_Drill1.1mm" H 9050 2450 60  0001 L CNN
+F 3 "http://www.jst-mfg.com/product/pdf/eng/eXH.pdf" H 9050 2550 60  0001 L CNN
+F 4 "455-2270-ND" H 9050 2650 60  0001 L CNN "Digi-Key_PN"
+F 5 "B5B-XH-A(LF)(SN)" H 9050 2750 60  0001 L CNN "MPN"
+F 6 "Connectors, Interconnects" H 9050 2850 60  0001 L CNN "Category"
+F 7 "Rectangular Connectors - Headers, Male Pins" H 9050 2950 60  0001 L CNN "Family"
+F 8 "http://www.jst-mfg.com/product/pdf/eng/eXH.pdf" H 9050 3050 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/jst-sales-america-inc/B5B-XH-A(LF)(SN)/455-2270-ND/1530483" H 9050 3150 60  0001 L CNN "DK_Detail_Page"
+F 10 "CONN HEADER VERT 5POS 2.5MM" H 9050 3250 60  0001 L CNN "Description"
+F 11 "JST Sales America Inc." H 9050 3350 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 9050 3450 60  0001 L CNN "Status"
+	1    8850 2250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #PWR01
+U 1 1 5FF5B90D
+P 8450 1750
+F 0 "#PWR01" H 8450 1600 50  0001 C CNN
+F 1 "VCC" H 8465 1923 50  0000 C CNN
+F 2 "" H 8450 1750 50  0001 C CNN
+F 3 "" H 8450 1750 50  0001 C CNN
+	1    8450 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5FF5CC9E
+P 8450 2350
+F 0 "#PWR02" H 8450 2100 50  0001 C CNN
+F 1 "GND" H 8455 2177 50  0000 C CNN
+F 2 "" H 8450 2350 50  0001 C CNN
+F 3 "" H 8450 2350 50  0001 C CNN
+	1    8450 2350
+	1    0    0    -1  
+$EndComp
+Text GLabel 8750 1950 0    50   Input ~ 0
+ROT_A_OUT
+Text GLabel 8750 2050 0    50   Input ~ 0
+ROT_B_OUT
+Text GLabel 8750 2150 0    50   Input ~ 0
+ROT_SW_OUT
+Wire Wire Line
+	8450 1750 8450 1850
+Wire Wire Line
+	8450 1850 8750 1850
+Wire Wire Line
+	8450 2350 8450 2250
+Wire Wire Line
+	8450 2250 8750 2250
 $EndSCHEMATC
