@@ -731,7 +731,7 @@ U 1 1 5FF50EA8
 P 8850 2250
 F 0 "J1" V 9091 2122 50  0000 R CNN
 F 1 "B5B-XH-A_LF__SN_" V 9000 2122 50  0000 R CNN
-F 2 "digikey-footprints:PinHeader_1x5_P2.5mm_Drill1.1mm" H 9050 2450 60  0001 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 9050 2450 60  0001 L CNN
 F 3 "http://www.jst-mfg.com/product/pdf/eng/eXH.pdf" H 9050 2550 60  0001 L CNN
 F 4 "455-2270-ND" H 9050 2650 60  0001 L CNN "Digi-Key_PN"
 F 5 "B5B-XH-A(LF)(SN)" H 9050 2750 60  0001 L CNN "MPN"

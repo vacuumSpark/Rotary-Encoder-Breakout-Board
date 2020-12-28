@@ -1,0 +1,9 @@
+* Add castellated holes
+* Change and correctly place pin header
+* Change or repair LED packages such that DRC error is resolved
+* Reposition labes so they don't overlap with vias
+* Add assembly markers
+* Add text to back of PCB
+    * Github url
+    * Designed with KiCAD
+    * License
