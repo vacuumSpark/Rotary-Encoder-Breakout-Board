@@ -1,9 +1,8 @@
-* Add castellated holes
-* Change and correctly place pin header
-* Change or repair LED packages such that DRC error is resolved
-* Reposition labes so they don't overlap with vias
-* Add assembly markers
 * Add text to back of PCB
-    * Github url
-    * Designed with KiCAD
-    * License
+    - Github url
+* Create mounting footprints
+    1 Castelated holes with holes for through-hole components
+    2 4 mounting holes with pin headers
+    3 combined mounting for options 1 and 2
+    4 panel mount hole for encouder and 4 mounting holes
+* commit to Github
